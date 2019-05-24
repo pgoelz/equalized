@@ -1,0 +1,41 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,arrows.meta,shapes,backgrounds,positioning,decorations.pathmorphing}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+\usepackage{pgfplots}
+\definecolor{c1}{HTML}{3F51B5}
+\definecolor{c2}{HTML}{43A047}
+\definecolor{c3}{HTML}{FF9800}
+\definecolor{c4}{HTML}{d32f2f}
+\definecolor{c5}{HTML}{6A1B9A}
+\usepackage[outline]{contour}
+\contourlength{.6pt}
+
+
+%!tikz preamble end
+
+
+\begin{document}
+%!tikz source begin
+\begin{tikzpicture}
+
+\begin{axis}[
+  axis lines=middle,
+  axis line style={-stealth,thick},
+  xmin=-0.05,xmax=1.05,ymin=-0.05,ymax=1.05,
+  xtick distance=.2,
+  ytick distance=.2,
+  %x=6cm, y=3cm,
+  %minor x tick num=1,
+  minor tick num=1,
+  x=5cm, y=5cm,
+  xlabel=$x$,
+  ylabel=$y$,
+  grid=both,
+  grid style={thin,densely dotted,black!20}]
+ 
+   \addplot [very thick,draw=black] coordinates {(0, 0) (.38, .17) (.74, .45) (1., 1.)};
